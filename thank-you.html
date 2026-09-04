@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're in! — JTKias App</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="assets/branding/jtk-logo.png">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .ty-wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4) var(--space-3);
+    background:
+      radial-gradient(900px 520px at 50% 0%, rgba(199,154,73,0.16), transparent 60%),
+      var(--night);
+  }
+  .ty-card {
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+    background: var(--night-dim);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: var(--space-4) var(--space-3);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+    animation: rise 700ms cubic-bezier(.2,.8,.2,1) both;
+  }
+  .ty-check {
+    width: 64px; height: 64px; margin: 0 auto var(--space-2);
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-bright), var(--gold-deep));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem; color: var(--night-deep);
+  }
+  .ty-card h1 { font-size: clamp(1.7rem, 4vw, 2.2rem); margin-bottom: 0.5rem; }
+  .ty-card .lede { margin: 0 auto var(--space-3); }
+  .ty-steps { text-align: left; margin: var(--space-3) 0; padding: 0; list-style: none; }
+  .ty-steps li {
+    display: flex; gap: 0.75rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(199,154,73,0.14);
+    font-size: 0.94rem; color: var(--cream-soft);
+  }
+  .ty-steps li:last-child { border-bottom: none; }
+  .ty-steps .num {
+    flex-shrink: 0;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    color: var(--gold-bright);
+    font-size: 0.78rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .ty-actions { display: flex; flex-direction: column; gap: 0.75rem; margin-top: var(--space-3); }
+  .ty-divider { margin: var(--space-3) 0; border: none; border-top: 1px solid rgba(199,154,73,0.16); }
+  .ty-contact { font-size: 0.9rem; color: var(--cream-soft); }
+  .ty-contact .copy-line { justify-content: center; margin-top: 0.5rem; }
+</style>
+</head>
+<body>
+
+<div class="ty-wrap">
+  <div class="ty-card">
+    <div class="ty-check">✓</div>
+    <h1>You're in, <span id="ty-name" style="color:var(--gold)">friend</span>.</h1>
+    <p class="lede" style="margin:0 auto var(--space-2);">Your free access to the JTKias App is ready. Here's how to get the most out of it:</p>
+
+    <ol class="ty-steps">
+      <li><span class="num">1</span><span>Check your email and confirm it's working — that's how you'll hear about new chapters, poems and tracks.</span></li>
+      <li><span class="num">2</span><span>Open the app below. No download, no app store — it just loads in your browser.</span></li>
+      <li><span class="num">3</span><span>Bookmark it or add it to your home screen so it's one tap away next time.</span></li>
+    </ol>
+
+    <div class="ty-actions">
+      <a href="https://jtkias.github.io/jtkias/" class="btn btn-gold btn-block" target="_blank" rel="noopener">Open the JTKias App →</a>
+      <a href="https://wa.me/263787726262" class="btn btn-outline btn-block" target="_blank" rel="noopener">💬 Message J.T. Kias on WhatsApp</a>
+    </div>
+
+    <hr class="ty-divider">
+    <p class="ty-contact">Need help, or have a story idea you want to bring to life? Reach out anytime.</p>
+    <div class="copy-line">
+      <span id="phone-number">+263 78 772 6262</span>
+      <button type="button" id="copy-phone">Copy</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
